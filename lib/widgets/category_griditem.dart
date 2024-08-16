@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:meals/Models/category.dart';
 
 class CategoryGriditem extends StatelessWidget {
-  const CategoryGriditem({super.key, required this.category});
+  const CategoryGriditem(
+      {super.key, required this.category, required this.onSelectCategory});
 
   final Category category;
-
+  final void Function() onSelectCategory;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -28,7 +29,7 @@ class CategoryGriditem extends StatelessWidget {
         child: Text(
           category.title,
           style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
+                color: Theme.of(context).colorScheme.onSurface,
               ),
         ),
       ),
