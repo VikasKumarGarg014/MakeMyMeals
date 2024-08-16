@@ -10,8 +10,9 @@ class CategoryGriditem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
-      borderRadius: BorderRadius.circular(10),
+      onTap: onSelectCategory,
+      borderRadius: BorderRadius.circular(20),
+      
       splashColor: Theme.of(context).primaryColor,
       child: Container(
         // margin: EdgeInsets.symmetric(horizontal: ),
